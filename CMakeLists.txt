@@ -674,6 +674,8 @@ else() # Standalone build
 		endif()
 		install(TARGETS aer)
 
+		install(FILES "${PROJECT_SOURCE_DIR}/contrib/runtime/aer_runtime_api.h" DESTINATION include)
+		
 		# Tests
 		if(BUILD_TESTS AND NOT AER_MPI)
 			add_executable(test_libaer "${PROJECT_SOURCE_DIR}/test/runtime/runtime_sample.c")
